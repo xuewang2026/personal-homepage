@@ -422,6 +422,99 @@
       margin-bottom: 18px;
     }
 
+    .articles-card {
+      margin-bottom: 18px;
+      padding: 22px;
+    }
+
+    .articles-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 18px;
+      margin-bottom: 16px;
+    }
+
+    .articles-head .section-title {
+      margin-bottom: 0;
+    }
+
+    .wechat-pill {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 14px;
+      border: 3px solid var(--line);
+      border-radius: 999px;
+      background: var(--accent-2);
+      box-shadow: var(--shadow-sm);
+      font-weight: 900;
+    }
+
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .article-card {
+      padding: 16px;
+      border: 3px solid var(--line);
+      border-radius: 18px;
+      background: #ffffff;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      min-height: 210px;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .article-card:nth-child(2) {
+      background: var(--accent);
+    }
+
+    .article-card:nth-child(3) {
+      background: var(--accent-2);
+    }
+
+    .article-card small {
+      display: inline-flex;
+      width: fit-content;
+      margin-bottom: 10px;
+      padding: 5px 8px;
+      border: 2px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      font-size: 0.82rem;
+      font-weight: 900;
+    }
+
+    .article-card strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.12rem;
+      line-height: 1.25;
+      font-weight: 900;
+    }
+
+    .article-card p {
+      margin-top: 0;
+    }
+
+    .article-link {
+      align-self: flex-start;
+      margin-top: 12px;
+      padding: 8px 11px;
+      border: 3px solid var(--line);
+      border-radius: 14px;
+      background: var(--ink);
+      color: #ffffff;
+      box-shadow: 3px 3px 0 #111111;
+      font-weight: 900;
+    }
+
     .note:nth-child(1) {
       background: var(--accent);
     }
@@ -454,6 +547,7 @@
     @media (max-width: 980px) {
       .hero,
       .layout-two,
+      .article-grid,
       .notes-grid {
         grid-template-columns: 1fr;
       }
@@ -470,7 +564,8 @@
       }
 
       .topbar,
-      .profile-top {
+      .profile-top,
+      .articles-head {
         flex-direction: column;
         align-items: flex-start;
       }
@@ -499,6 +594,7 @@
         <a class="neo-hover" href="#about">关于</a>
         <a class="neo-hover" href="#journey">经历</a>
         <a class="neo-hover" href="#projects">项目</a>
+        <a class="neo-hover" href="#articles">文章</a>
         <a class="neo-hover" href="#contact">联系</a>
       </nav>
     </header>
@@ -646,6 +742,45 @@
           </div>
         </div>
       </article>
+    </section>
+
+    <section class="articles-card neo" id="articles">
+      <div class="articles-head">
+        <div>
+          <div class="section-kicker">WECHAT ARTICLES</div>
+          <h2 class="section-title">公众号文章</h2>
+          <p class="muted">
+            这里会同步我在公众号里的长文与实践笔记，主要记录 AI 应用、审计智能体、知识库建设和独立开发路上的真实踩坑。
+          </p>
+        </div>
+        <div class="wechat-pill">微信内搜索：芥末汽水</div>
+      </div>
+      <div class="article-grid">
+        <article class="article-card neo-hover">
+          <div>
+            <small>AI AGENT</small>
+            <strong>AI Agent 实践笔记</strong>
+            <p>从一个具体业务问题出发，记录智能体如何拆任务、调工具、沉淀知识，并真正进入日常工作流。</p>
+          </div>
+          <a class="article-link" href="#contact" aria-label="联系我获取 AI Agent 实践笔记文章链接">待补充链接 →</a>
+        </article>
+        <article class="article-card neo-hover">
+          <div>
+            <small>AUDIT / KNOWLEDGE</small>
+            <strong>审计知识库建设复盘</strong>
+            <p>聊聊企业审计场景里，知识为什么容易散、怎么归档复用，以及如何让查询和辅助分析变得更顺手。</p>
+          </div>
+          <a class="article-link" href="#contact" aria-label="联系我获取审计知识库建设复盘文章链接">待补充链接 →</a>
+        </article>
+        <article class="article-card neo-hover">
+          <div>
+            <small>VIBE CODING</small>
+            <strong>从灵感到可用工具</strong>
+            <p>记录用 Vibe Coding 快速做出个人效率工具和安卓应用的过程：不只做 demo，也尽量做成能用的东西。</p>
+          </div>
+          <a class="article-link" href="#contact" aria-label="联系我获取从灵感到可用工具文章链接">待补充链接 →</a>
+        </article>
+      </div>
     </section>
 
     <section class="notes-grid">
